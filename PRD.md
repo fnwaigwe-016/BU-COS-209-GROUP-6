@@ -4,17 +4,19 @@
 **Course**: BU-COS 209   
 **Team**: Group 6 (`BU-COS-209-GROUP-6`)  
 
-1. Product Overview
+## 1. Product Overview
 This is a Navigation system that helps, incoming students, regular students, staff, visitors and even parents to be able to find their way around the campus easily no matter where it is.
 
 ## 2. Problem Statement & User Research
 **The Problem**
-From the research conducted, it was found out that some of the interviewed campus users has had some bad experience, either lateness to class, failure to locate a particular building, and so on.
+From the research conducted, it was found out that some of the interviewed campus users have had some bad experience, either lateness to class, failure to locate a particular building, and so on.
 
 ### Primary Research Findings (Survey = 8 users)
 To validate this problem, our team surveyed 8 campus community members across different groups (100-level fresher, returning students, postgraduate student, lecturer/staff, and a visitor/parent).
 
 **Research Metric** 
+| Research Metric | Survey Result (N = 8) | Key Takeaway |
+| :--- | :--- | :--- |
 | **Lateness due to navigation** | **62.5%** (5 out of 8) arrived late to a class, exam, or appointment | Poor wayfinding directly harms punctuality |
 | **Current coping habit** | **75.0%** (6 out of 8) ask passersby, security, or porters first | High reliance on informal, error-prone human help |
 | **Hardest locations to find** | **62.5%** (5 out of 8) struggle with indoor lecture halls/classrooms | Pinpointing a building exterior is not enough |
@@ -28,8 +30,8 @@ To validate this problem, our team surveyed 8 campus community members across di
 > — *Returning Student (200-Level & above)*
 
 ### Why Existing Solutions Fall Short
-- **Standard Map Apps (e.g., Google Maps):** As much as google maps sounds like a solution, it falls short because not every person in the campus community has an access to active mobile internet and also the school wifi might not also be effective everywhere.
-  Secondly, the user, might not know the name of where he/she is going as to search on the map.
+- **Standard Map Apps (e.g., Google Maps):** As much as Google Maps sounds like a solution, it falls short because not every person in the campus community has an access to active mobile internet and also the school wifi might not also be effective everywhere.
+  Secondly, the user, might not know the name of where he/she is going as to search on the Map.
 - **Asking Passersby / Security:** A passerby might also not know the name of the place and also it affects your timing to your specific appointment when you keep stopping from time to time to inquire about direction.
 
 ## 3. Proposed Solution
@@ -44,51 +46,42 @@ A system where the campus community can be able to find their way easily using l
 ## 5. MVP Scope & Features
 
 ### In-Scope (Version 1 MVP)
-1. **Keyword & Nickname Search:** [Describe in 1 sentence.]
-2. **Building-to-Room Directory:** [Describe in 1 sentence.]
-3. **Landmark-Based Walking Directions:** [Describe in 1 sentence.]
-4. **Operating Hours & Gate Status:** [Describe in 1 sentence.]
-5. **Admin Venue & Closure Management:** [Describe in 1 sentence.]
+1. **Keyword & Nickname Search:** Users can search or know a building by its nickname.
+2. **Building-to-Room Directory:** Users can click on a building to see its floors and specific room directions.
+3. **Landmark-Based Walking Directions:** Users can be guided using a Landmark in order to recognize a particular building.
+4. **Operating Hours & Gate Status:** Users can be able to plan their time and accessibility in order to avoid delay or missed appointments.
+5. **Admin Venue & Closure Management:** Management keeps the directory accurate, so users aren't sent to locked buildings or renamed buildings.
 
-### Out-of-Scope (Future Versions)
-- [List 2–3 features you are saving for later, e.g., live turn-by-turn GPS voice navigation, indoor AR arrows, or campus shuttle tracking.]
-
----
 
 ## 6. Detailed Requirements, User Stories & Acceptance Criteria
 
-### Feature 1: Alias & Nickname Search
-- **User Story:** As a [user type], I want to [action] so that [benefit].
+### Feature 1:  Nickname Search
+- **User Story:** As a 100 level Student, I want to be able to know the lecture halls by their nickname so that i can easily find the place when i don't know it by the name written on my time table.
 - **Acceptance Criteria:**
-  - [Condition 1 that must be true for this feature to work]
-  - [Condition 2, e.g., handling partial matches or slow mobile internet]
+  - Type searching either the official or nickname of that building that returns to same building.
+  - Text search result load quickly even with a poor internet connection.
 
-### Feature 2: Hierarchical Indoor Location Data
-- **User Story:** As a [user type], I want to [action] so that [benefit].
+### Feature 2: Indoor Location Data
+- **User Story:** As a student looking for a classroom, I want to know the exact floor and room details so that i don't go back and forth in the wrong place.
 - **Acceptance Criteria:**
-  - [Condition 1, e.g., displays Building -> Floor -> Wing -> Room description]
-  - [Condition 2, e.g., includes entrance or landmark photos]
+  - Displays Building -> Floor -> Wing -> Room description
+  - Includes entrance or landmark photos
 
 ### Feature 3: Landmark & Footpath Walking Directions
-- **User Story:** As a [user type], I want to [action] so that [benefit].
+- **User Story:** As a visitor or parent, I want to be able to use visible landmarks so that i don't get lost while asking passerby.
 - **Acceptance Criteria:**
-  - [Condition 1, e.g., routes include pedestrian shortcuts]
-  - [Condition 2, e.g., uses visible campus landmarks instead of street names alone]
+  - Routes include pedestrian shortcuts.
+  - Uses visible campus landmarks instead of street names alone.
 
-### Feature 4: Operating Hours & Access Status
-- **User Story:** As a [user type], I want to [action] so that [benefit].
-- **Acceptance Criteria:**
-  - [Condition 1, e.g., shows whether a building or shortcut gate is currently Open or Closed]
 
 ### Edge Cases Handled
-- **Poor Internet Connectivity:** [Explain how the system still delivers basic text directions on slow data.]
-- **Duplicate Room Numbers:** [Explain how the system separates "Room 101" in two different buildings.]
-- **Closed Gates After Hours:** [Explain what happens when a shortcut closes in the evening.]
+- **Poor Internet Connectivity:** The system displays the text directions and room details first before the photos so the users can still navigate even with poor internet connection.
+- **Duplicate Room Numbers:** Every room should display each building and faculty name (e.g. Lecture Room 1 New Horizon or Lecture Room 1 Bucodel) so that student doesn't end up in the wrong building 
+- **Closed Gates After Hours:** System checks available gates and redirects the user to the available gate open.
 
----
 
 ## 7. Success Metrics
-- **Active Searches:** [Target number of weekly student/visitor lookups]
-- **Reduction in Lateness:** Reduce venue-related lateness from our **62.5% survey baseline** to under **[X]%**.
-- **Self-Service Navigation:** Reduce reliance on asking passersby from our **75.0% baseline** to under **[X]%**.
-- **Directory Accuracy:** Fewer than **[X]%** of searches result in reported wrong or outdated room directions.
+- **Active Searches:** Upon resumption, freshers, visitors and parents will be looking for offices, hostels etc. We have a target to have at least 300+ weekly searches.
+- **Reduction in Lateness:** Reduce venue-related lateness from our **62.5% survey baseline** to under **20%**.
+- **Self-Service Navigation:** Reduce reliance on asking passersby from our **75.0% baseline** to under **25%** users who can navigate on their own.
+- **Directory Accuracy:** Fewer than **10%** of searches result in reported wrong or outdated room directions.
