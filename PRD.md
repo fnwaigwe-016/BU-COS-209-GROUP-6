@@ -23,11 +23,11 @@ To validate this problem, our team surveyed 8 campus community members across di
 | **Most requested help** | **62.5%** (5 out of 8) want step-by-step landmark directions | Users prefer visual landmarks over raw coordinates |
 
 ### Real User Experiences (Survey Quotes)
-> "When I got to a location and I was told that it was the wrong place. Only to be directed to another place and it still was the wrong location. I was just going in circles, and eventually the first place was actually where I was supposed to go."  
-> — *Postgraduate Student (3+ years on campus)*
+ "When I got to a location and I was told that it was the wrong place. Only to be directed to another place and it still was the wrong location. I was just going in circles, and eventually the first place was actually where I was supposed to go."  
+ — *Postgraduate Student (3+ years on campus)*
 
-> "Walking to a different place and later finding out it was closer than where we went."  
-> — *Returning Student (200-Level & above)*
+ "Walking to a different place and later finding out it was closer than where we went."  
+ — *Returning Student (200-Level & above)*
 
 ### Why Existing Solutions Fall Short
 - **Standard Map Apps (e.g., Google Maps):** As much as Google Maps sounds like a solution, it falls short because not every person in the campus community has an access to active mobile internet and also the school wifi might not also be effective everywhere.
@@ -72,7 +72,17 @@ A system where the campus community can be able to find their way easily using l
 - **Acceptance Criteria:**
   - Routes include pedestrian shortcuts.
   - Uses visible campus landmarks instead of street names alone.
+    
+## Functional Requirements
+- **Keyword & Nickname Search**`: Users can search for any building, lecture hall, or office using either its official name or common student nicknames (e.g., New Horizon, Bucodel, SAT).
+- **Room Lookup**: Selecting a building displays its internal breakdown—Building → Floor → Wing → Room description—along with reference photos of the entrance or nearby landmarks.
+- **Landmark-Based Walking Directions**: Users can pick a starting point (like the Main Gate or Cafeteria) and get step-by-step walking directions that use visible landmarks and pedestrian shortcuts.
 
+## Non-Functional Requirements
+- **Performance on Low Connectivity**: Because mobile data and campus Wi-Fi can be slow in certain areas, lightweight text directions and room details must load within 2–3 seconds before heavy entrance photos are downloaded.
+- **Availability During Peak Hours**: The system must remain reliable and accessible during high-traffic periods—such as 7:00 AM lecture rushes, exam weeks, and resumption/convocation days.
+- **Usability for First-Time Visitors**: The search and step-by-step instructions must be simple enough for a parent or visitor to understand immediately without a guide.
+- **Security & Role-Based Access**: Public users (students, staff, visitors) can search and view locations freely without logging in, while only authenticated campus administrators can add, edit, or delete venue records.
 
 ### Edge Cases Handled
 - **Poor Internet Connectivity:** The system displays the text directions and room details first before the photos so the users can still navigate even with poor internet connection.
